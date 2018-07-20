@@ -1,5 +1,14 @@
 import logging
 import sys
+import configparser
+
+
+class ConfigStuff:
+    config = configparser.ConfigParser()
+    config.read('example.ini')
+    print(config.sections())
+
+c = ConfigStuff()
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
